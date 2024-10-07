@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 id="typewriter"></h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="https://github.com/kathar-patcha-abdul-rahim" target="_blank">GitHub Profile</a>
+</nav>
+
+<section id="projects">
+
+    <div class="projects">
+        <h2>Protein Content Claimer (ongoing)</h2>
+        <p>An ongoing web application that determines whether a protein source meets North American regulatory
+            requirements for content claims like "good source" or "excellent source." It processes user inputs or
+            uploaded files, calculates protein content, and displays results.</p>
+        <p><strong>Technologies Used:</strong> Python, Pandas, OCR, HTML, CSS, JavaScript</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>ProteinContentClaimer</h3>
+            <p>This repository contains the implementation of the ProteinContentClaimer web application, which evaluates
+                protein content against regulatory standards in North America.</p>
+            <h4>Overview</h4>
+            <p>The ProteinContentClaimer application allows users to input data or upload files, automatically
+                calculating protein content and determining compliance with content claims such as "good source" or
+                "excellent source."</p>
+            <h4>Features</h4>
+            <ul>
+                <li>User Input Processing: Allows users to input protein source information directly.</li>
+                <li>File Upload: Users can upload files for automatic processing.</li>
+                <li>Content Calculation: Calculates protein content based on user input or uploaded data.</li>
+                <li>Regulatory Compliance: Evaluates whether the protein source meets regulatory requirements for
+                    content claims.
+                </li>
+            </ul>
+            <h4>Current Status</h4>
+            <p>This project is currently ongoing, with ongoing improvements and updates being made to enhance
+                functionality and user experience.</p>
+            <h4>Installation</h4>
+            <pre>
+git clone https://github.com/kathar-patcha-abdul-rahim/protein-content-claimer.git
+cd protein-content-claimer
+pip install -r requirements.txt
+Run the application: <code>python app.py</code>
+        </pre>
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+    <div class="projects">
+        <h2>Deep Learning Based Driver Distraction Detection</h2>
+        <p>Driver distraction is a leading cause of accidents on the road. This project aims to address this issue by
+            developing a Driver Activity Recognition (DAR) system that classifies various distracted behaviors using
+            deep learning techniques. The system identifies 10 common distracted driving activities such as texting,
+            talking on the phone, and operating the radio.</p>
+
+        <p><strong>Technologies Used:</strong> NumPy, Pandas, Matplotlib, OS Module, OpenCV (cv2), Scikit-learn
+            (Confusion Matrix, Train-Test Split, LabelEncoder, Seaborn), TensorFlow, Keras (Layers, Sequential Model,
+            Optimizers, to_categorical), ImageDataGenerator</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>Deep Learning-Based Driver Distraction Detection</h3>
+            <p>This repository contains the implementation of a deep learning-based system to detect driver distractions
+                using Convolutional Neural Networks (CNNs). The goal of this project is to enhance road safety by
+                recognizing common distracted driving behaviors and reducing the likelihood of accidents caused by
+                inattention.</p>
+            <h4>Overview</h4>
+            <p>Driver distraction is a leading cause of accidents on the road. This project aims to address this issue
+                by developing a Driver Activity Recognition (DAR) system that classifies various distracted behaviors
+                using deep learning techniques. The system identifies 10 common distracted driving activities such as
+                texting, talking on the phone, and operating the radio.</p>
+            <h4>Project Structure</h4>
+            <p><strong>Dataset:</strong> The <a href="https://www.kaggle.com/c/state-farm-distracted-driver-detection"
+                                                target="_blank" style="color:blue;">State Farm Distracted Driver
+                Detection dataset</a> was used to train and test the model. It contains 22,500 labeled images
+                representing 10 driver activities.</p>
+            <p><strong>Models:</strong></p>
+            <ul>
+                <li>Pre-trained Models: DenseNet121, VGG16, MobileNetV2</li>
+                <li>Custom Model: DARNET (Custom CNN architecture)</li>
+                <li>Ensemble Learning: Combines DenseNet121 and DARNET for improved accuracy.</li>
+            </ul>
+            <p><strong>Key Metrics:</strong></p>
+            <ul>
+                <li>Test Accuracy: 99.24% (Ensemble model)</li>
+                <li>Test Loss: 0.0390 (DARNET)</li>
+            </ul>
+            <h4>Features</h4>
+            <p>Driver Behavior Classification: Detects 10 common driver activities:</p>
+            <ul>
+                <li>Safe driving</li>
+                <li>Texting (right hand)</li>
+                <li>Talking on the phone (right hand)</li>
+                <li>Texting (left hand)</li>
+                <li>Talking on the phone (left hand)</li>
+                <li>Operating the radio</li>
+                <li>Drinking</li>
+                <li>Reaching behind</li>
+                <li>Hair and makeup</li>
+                <li>Talking to passengers</li>
+            </ul>
+            <h4>Installation</h4>
+            <pre>
+git clone https://github.com/kathar-patcha-abdul-rahim/driver-distraction-detection.git
+cd driver-distraction-detection
+pip install -r requirements.txt
+Download the dataset: <a href="https://www.kaggle.com/c/state-farm-distracted-driver-detection" target="_blank"
+                         style="color: blue;">Download the State Farm Distracted Driver dataset from Kaggle</a> and place it in the <code>data/</code> directory.
+Run the training script: <code>python train.py</code>
+            </pre>
+            <h4>Models</h4>
+            <ul>
+                <li>DenseNet121: Pre-trained on ImageNet, fine-tuned for driver behavior detection.</li>
+                <li>VGG16: Simple yet effective CNN architecture used for comparison.</li>
+                <li>MobileNetV2: Designed for mobile and embedded systems, providing efficient real-time
+                    classification.
+                </li>
+                <li>DARNET: A custom CNN architecture developed for this project to improve classification accuracy.
+                </li>
+            </ul>
+            <h4>Results</h4>
+            <p>The ensemble model combining DenseNet121 and DARNET achieved the highest accuracy of 99.24% in
+                classifying distracted driver behaviors. The custom DARNET architecture performed exceptionally well
+                with a test accuracy of 98.60%.</p>
+            <h4>Challenges and Future Work</h4>
+            <p>Dataset Limitations: The current dataset is captured in controlled environments. Expanding the dataset to
+                include real-world conditions can further improve model generalization.</p>
+            <p>Real-time Processing: Implementing this system in real-time requires optimizing model inference time.</p>
+            <p>Privacy and Ethical Concerns: Addressing user privacy while monitoring driver activities will be crucial
+                for widespread adoption.</p>
+            <h4>Contributing</h4>
+            <p>Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or
+                feature requests.</p>
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+            <h4>Acknowledgements</h4>
+            <p>Kaggle for providing the State Farm Distracted Driver Detection dataset. TensorFlow and Keras for the
+                deep learning frameworks used in this project.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+    <div class="projects">
+        <h2>Human vs LLM - Text Detection</h2>
+        <p>This project aims to develop a text detection system that distinguishes between human-generated text and text
+            produced by language models (LLMs). The goal is to create a reliable mechanism to identify the origin of
+            text for various applications such as content moderation and academic integrity.</p>
+        <p><strong>Technologies Used:</strong> Python, Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Word2Vec,
+            Principal Component Analysis (PCA), DistilBERT, Multi-Layer Perceptron (MLP), Stochastic Gradient Descent
+            (SGD), Logistic Regression, ADASYN</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>Human vs LLM - Text Detection</h3>
+            <p>This repository contains the implementation of a text detection system that differentiates between
+                human-written text and text generated by language models using various machine learning techniques.</p>
+            <h4>Overview</h4>
+            <p>The project focuses on developing a classifier that can accurately determine the origin of a given text
+                sample. It leverages features extracted from the text to build a robust detection model.</p>
+            <h4>Project Structure</h4>
+            <p><strong>Dataset:</strong> The project uses a dataset comprising human-written texts and texts generated
+                by different LLMs for training and evaluation purposes.</p>
+            <h4>Models:</h4>
+            <ul>
+                <li>Logistic Regression</li>
+                <li>Support Vector Machine (SVM)</li>
+                <li>Deep Learning Model (e.g., LSTM, BERT)</li>
+            </ul>
+            <h4>Key Metrics:</h4>
+            <ul>
+                <li>Accuracy: 95% (Deep Learning Model)</li>
+                <li>F1 Score: 0.93</li>
+            </ul>
+            <h4>Features</h4>
+            <p>The detection system includes:</p>
+            <ul>
+                <li>Classification of text as human or LLM-generated</li>
+                <li>Performance evaluation metrics for model comparison</li>
+                <li>Visualization of results and metrics</li>
+            </ul>
+            <h4>Installation</h4>
+            <pre>
+git clone https://github.com/kathar-patcha-abdul-rahim/human-vs-llm-text-detection.git
+cd human-vs-llm-text-detection
+pip install -r requirements.txt
+Run the training script: <code>python train.py</code>
+        </pre>
+            <h4>Results</h4>
+            <p>The deep learning model achieved an accuracy of 95%, outperforming traditional methods like logistic
+                regression and SVM.</p>
+            <h4>Challenges and Future Work</h4>
+            <p>Future improvements could include enhancing the model with more diverse datasets, implementing real-time
+                detection capabilities, and addressing ethical considerations regarding text usage and ownership.</p>
+            <h4>Contributing</h4>
+            <p>Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or
+                feature requests.</p>
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+            <h4>Acknowledgements</h4>
+            <p>Thanks to the open-source community and resources for their contributions to this project.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+    <div class="projects">
+        <h2>Job Environment Simulator</h2>
+        <p>This project aims to bridge the gap between academic learning and real-world IT experience by connecting
+            university students with companies. The platform allows students to work on actual industry tasks, enhancing
+            their practical skills and readiness for the workforce.</p>
+        <p><strong>Technologies Used:</strong> Laravel, Blade, PHP, JavaScript, MySQL</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>Bridging the Gap: Student-Company Collaboration Platform</h3>
+            <p>This repository contains the implementation of a collaboration platform that connects students with
+                companies, enabling them to tackle real-world tasks and gain valuable experience in their fields.</p>
+            <h4>Overview</h4>
+            <p>The platform facilitates student-company interactions by allowing companies to post tasks that replicate
+                actual industry challenges, while students can submit their solutions and receive feedback to enhance
+                their learning experience.</p>
+            <h4>Project Structure</h4>
+            <p><strong>Components:</strong> The project includes a web application with a front-end developed in React
+                and a back-end powered by Node.js and MongoDB for data storage.</p>
+            <h4>Features</h4>
+            <ul>
+                <li><strong>Real-World Tasks:</strong> Companies can post tasks that replicate actual industry
+                    challenges for students to complete.
+                </li>
+                <li><strong>Student Interaction:</strong> Students can submit their solutions and receive feedback,
+                    improving their skills.
+                </li>
+                <li><strong>Leaderboards:</strong> Rankings for both students and companies based on task submissions
+                    and ratings.
+                </li>
+                <li><strong>User-Friendly Interface:</strong> An intuitive design for seamless navigation and
+                    interaction.
+                </li>
+            </ul>
+            <h4>Installation</h4>
+            <pre>
+git clone https://github.com/kathar-patcha-abdul-rahim/student-company-collaboration.git
+cd student-company-collaboration
+npm install
+Run the server: <code>npm start</code>
+        </pre>
+            <h4>Results</h4>
+            <p>The platform has successfully facilitated numerous collaborations between students and companies,
+                enhancing student readiness for the workforce.</p>
+            <h4>Challenges and Future Work</h4>
+            <p>Future improvements may involve expanding the task database, incorporating more industry partners, and
+                enhancing the feedback system to provide more detailed evaluations of student submissions.</p>
+            <h4>Contributing</h4>
+            <p>Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or
+                feature requests.</p>
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+            <h4>Acknowledgements</h4>
+            <p>Thanks to the academic institutions and companies for their support and collaboration in this
+                project.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+    <div class="projects">
+        <h2>dftw - Directory and File Tree Walker</h2>
+        <p>The dftw C program performs various directory and file management operations using command-line arguments. It
+            leverages the nftw() system call for recursive traversal of directory trees, allowing actions such as
+            counting files, counting directories, copying/moving directories, and calculating file sizes.</p>
+        <p><strong>Technologies Used:</strong> C, nftw() system call, Unix</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>dftw - Directory and File Tree Walker</h3>
+            <p>This repository contains the implementation of the dftw C program, which is designed to perform various
+                directory and file management operations through the command line.</p>
+            <h4>Overview</h4>
+            <p>The program utilizes the nftw() system call for recursive traversal of directory trees, enabling users to
+                execute multiple file and directory management tasks efficiently.</p>
+            <h4>Features</h4>
+            <ul>
+                <li><strong>File Count (-nf):</strong> Counts all files in a directory tree rooted at a specified
+                    directory.
+                </li>
+                <li><strong>Directory Count (-nd):</strong> Counts all directories in a directory tree.</li>
+                <li><strong>File Size Listing (-sf):</strong> Lists the sizes of all files in the directory tree.</li>
+                <li><strong>Copy Directory (-cpx):</strong> Copies an entire directory tree, excluding files with
+                    specific extensions.
+                </li>
+                <li><strong>Move Directory (-mv):</strong> Moves an entire directory tree to a new location.</li>
+            </ul>
+            <h4>Usage</h4>
+            <p>Open the attached PDF file to learn more about the usage of the program and its various
+                functionalities.</p>
+            <h4>Installation</h4>
+            <pre>
+git clone https://github.com/kathar-patcha-abdul-rahim/dftw.git
+cd dftw
+make
+        </pre>
+            <h4>Results</h4>
+            <p>The dftw program successfully performs the specified directory and file management tasks, streamlining
+                operations for users managing file systems.</p>
+            <h4>Challenges and Future Work</h4>
+            <p>Future improvements may include enhancing the user interface, adding support for additional file
+                operations, and improving error handling mechanisms.</p>
+            <h4>Contributing</h4>
+            <p>Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or
+                feature requests.</p>
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+            <h4>Acknowledgements</h4>
+            <p>Thanks to the open-source community for the libraries and tools used in this project.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+    <div class="projects">
+        <h2>prc24s - Process Tree Management Tool</h2>
+        <p>The prc24s program is a C-based tool that interacts with process trees, providing functionalities like
+            listing, killing, pausing, and resuming processes based on user input. It is designed to operate using the
+            Linux process tree structure, allowing process management and analysis through various command-line
+            options.</p>
+        <p><strong>Technologies Used:</strong> C, Linux system calls</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>prc24s - Process Tree Management Tool</h3>
+            <p>This repository contains the implementation of the prc24s program, a tool designed for process management
+                and interaction with Linux process trees through various command-line options.</p>
+            <h4>Overview</h4>
+            <p>The prc24s program allows users to manage processes effectively by providing functionalities such as
+                listing, killing, pausing, and resuming processes based on user input.</p>
+            <h4>Features</h4>
+            <ul>
+                <li><strong>Basic Process Info:</strong> Lists the PID and PPID of a specified process if it belongs to
+                    the process tree rooted at a specific root process.
+                </li>
+                <li><strong>Process Actions:</strong>
+                    <ul>
+                        <li><strong>-dx:</strong> Kills all descendants of the root process.</li>
+                        <li><strong>-dt:</strong> Pauses all descendants of the root process.</li>
+                        <li><strong>-dc:</strong> Resumes paused descendants.</li>
+                        <li><strong>-rp:</strong> Kills a specified process.</li>
+                        <li><strong>-nd:</strong> Lists the PIDs of non-direct descendants.</li>
+                        <li><strong>-dd:</strong> Lists the PIDs of immediate descendants.</li>
+                        <li><strong>-sb:</strong> Lists the sibling PIDs.</li>
+                        <li><strong>-bz:</strong> Lists the sibling PIDs that are defunct (zombie).</li>
+                        <li><strong>-zd:</strong> Lists all defunct descendants.</li>
+                        <li><strong>-od:</strong> Lists orphan descendants.</li>
+                        <li><strong>-gc:</strong> Lists the grandchildren.</li>
+                        <li><strong>-sz:</strong> Displays if a process is defunct.</li>
+                        <li><strong>-so:</strong> Displays if a process is orphaned.</li>
+                        <li><strong>-kz:</strong> Kills the parents of all zombie descendants.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Usage</h4>
+            <p>The program accepts a variety of command-line options to interact with and manage processes in a tree
+                structure. Please refer to the attached PDF for more details about usage.</p>
+            <h4>Notes</h4>
+            <p>This program must be implemented on the university's CS Linux server using your official login. Be
+                cautious of creating fork bombs; use <code>$killall -u username</code> to terminate processes regularly.
+                Adequate comments must be included to explain the working of the program.</p>
+            <h4>License</h4>
+            <p>This project is for academic use only as part of COMP-8567 coursework for Summer 2024.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+
+    <div class="projects">
+        <h2>Enhanced Prototype for Security and Health Purpose Using IoT</h2>
+        <p>A wristwatch-type prototype that continuously monitors human health. Based on changes in body conditions, it
+            automatically assumes the problem and reports it to the respective department along with the user's location
+            to get help and support.</p>
+        <p><strong>Technologies Used:</strong> Arduino, GPS tracker, Pulse meter, Temperature sensor, Blood Pressure
+            monitor</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>Enhanced Prototype for Security and Health Purpose Using IoT</h3>
+            <p>This project aims to create a wristwatch-type prototype that continuously monitors health parameters. It
+                will automatically assess any changes in the user's body conditions and report them to the respective
+                authorities along with the user's location.</p>
+
+            <h4>Overview</h4>
+            <p>This prototype utilizes various sensors to monitor parameters such as heart rate, body temperature, and
+                blood pressure. If any abnormal conditions are detected, the device will send alerts to the concerned
+                department, ensuring timely medical assistance.</p>
+
+            <h4>Project Structure</h4>
+            <p><strong>Components:</strong> The project uses an Arduino microcontroller along with a GPS tracker, pulse
+                meter, temperature sensor, and blood pressure monitor.</p>
+
+            <h4>Features</h4>
+            <ul>
+                <li>Real-time health monitoring</li>
+                <li>Automatic alert system for emergencies</li>
+                <li>Location tracking via GPS</li>
+                <li>Integration with GSM for sending alerts</li>
+                <li>Customizable alert thresholds based on user needs</li>
+                <li>User-friendly interface for data visualization</li>
+            </ul>
+
+            <h4>Challenges and Future Work</h4>
+            <p>Challenges include ensuring accurate sensor readings and minimizing false alerts. Future improvements
+                could involve integrating more health parameters, enhancing the user interface for better interaction,
+                and implementing machine learning algorithms for predictive health monitoring.</p>
+
+            <h4>Important Notice</h4>
+            <p>This project is based on IoT development, utilizing hardware like the <strong>ESP8266</strong>. The
+                project involves various libraries with deep directory structures that are critical for its operation.
+                However, due to operating system limitations, particularly on Windows, where the maximum file path
+                length is 260 characters, I have not uploaded the project to GitHub. All files and project resources are
+                stored locally on my system.</p>
+
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+
+            <h4>Acknowledgements</h4>
+            <p>Thanks to the open-source community for the libraries and tools used in this project.</p>
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+</section>
+
+
+<section class="qna-section">
+    <h2>Ask Me Anything</h2>
+    <input type="text" id="question" placeholder="Ask me a question..."/>
+    <button onclick="askQuestion()">Submit</button>
+    <p id="response"></p>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/katharpatcha99" target="_blank">Kathar
+        Patcha</a></p>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:abdulrak@uwindsor.ca">abdulrak@uwindsor.ca</a></p>
+    <p><i class="fas fa-phone-alt"></i> Phone: +1 382 880 0747</p>
+    <p class="copyright">© 2024 Kathar Patcha. All rights reserved.</p>
+</section>
+
+<footer>
+    <nav>
+        <a href="index.html" style="color: orange;">Back to Home</a>
+    </nav>
+</footer>
+
+<script>
+    const text = "Kathar Patcha - Projects";
+    let index = 0;
+    const speed = 100; // typing speed in milliseconds
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("typewriter").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+        } else {
+            // Restart the typing effect by clearing the text and resetting index
+            setTimeout(() => {
+                document.getElementById("typewriter").innerHTML = "";
+                index = 0;
+                typeWriter();
+            }, 1000); // Wait 2 seconds before restarting
+        }
+    }
+
+    window.onload = typeWriter;
+
+    let previousScrollPosition = 0;
+
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            // Store the current scroll position
+            previousScrollPosition = window.scrollY;
+            const dropdownContent = button.nextElementSibling;
+
+            // Check if the dropdown is already visible
+            if (dropdownContent.style.display === 'block') {
+                // Hide the dropdown
+                dropdownContent.style.display = 'none';
+                // Change button text to "More Details"
+                button.textContent = 'More Details';
+            } else {
+                // Show the dropdown
+                dropdownContent.style.display = 'block';
+                // Change button text to "Close Details"
+                button.textContent = 'Close Details';
+            }
+
+            // Scroll to the stored position
+            window.scrollTo(0, previousScrollPosition);
+        });
+    });
+
+    document.querySelectorAll('.close-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const dropdownContent = button.parentElement;
+            dropdownContent.style.display = 'none'; // Hide the dropdown
+
+            // Change the text of the corresponding dropdown button back to "More Details"
+            const dropdownButton = dropdownContent.previousElementSibling;
+            dropdownButton.textContent = 'More Details';
+
+            // Scroll back to the previous position
+            window.scrollTo(0, previousScrollPosition);
+        });
+    });
+
+    function askQuestion() {
+        const question = document.getElementById('question').value;
+        fetch('/ask', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ question }),
+        })
+            .then(response => response.json())
+            .then(data => {
+            document.getElementById('response').innerText = data.answer;
+        });
+    }
+</script>
+
+</body>
+</html>

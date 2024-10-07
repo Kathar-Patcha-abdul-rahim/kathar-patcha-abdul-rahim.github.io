@@ -1,0 +1,75 @@
+username: abdulrak@uwindsor.ca
+Password: Basha@Jobs25
+
+Genesys - Contribution and Learning
+
+Contribution: I worked as an Associate Software Engineer in Test (SDET) at Genesys, where I was primarily responsible for automating testing scenarios across API, UI, and End-to-End testing. I took full ownership of assigned epics or features, from understanding them to developing automation stories and scenarios using Java with the TestNG framework. I actively contributed to the stability and functionality of key modules, including the Speech To Text feature, while also providing innovative ideas to optimize the product for both the organization and clients. Additionally, I developed several internal web applications to enhance efficiency and reduce workload across the testing teams.
+
+Learning: Through this role, I gained deep expertise in building testing frameworks from scratch to accommodate complex features. I honed my skills in various testing methodologies, including API, UI, and End-to-End testing, while learning to manage the entire test lifecycle independently. I also learned and implemented Java design patterns for better optimization and understanding, which enhanced my approach to software development and testing. Working on multiple feature deployments taught me to balance innovation with stability, continuously improving both the product and my technical skills.
+
+Accenture - Contribution and Learning
+
+Contribution: At Accenture, I worked as an Associate Software Engineer within the Integrated Web Application Testing team. My primary responsibilities involved understanding and following the testing process from Test Planning to Test Case Design, and end-to-end test execution. I contributed significantly to automating the testing process using Selenium with Java. I actively engaged in system, integration, and regression testing to ensure consistent updates and functionality even after the product went live. Additionally, I provided valuable input into the design of various test cases and resolved multiple functional issues that arose in the applications.
+
+Learning: During my time at Accenture, I strengthened my skills in testing methodologies, including system, integration, and regression testing. I learned how to effectively contribute to test automation and applied my knowledge of Selenium with Java in real-world scenarios. Completing the tester training within the top 10 and earning a spot on the Wall of Fame was a significant achievement, further solidifying my foundational expertise in software testing and continuous improvement.
+
+
+References: 
+
+glory.shashikala@genesys.com
++919884136021
+
+Srinath.muralidharan@accenture.com
++919255686592
+
+LinkedIn Url:
+https://www.linkedin.com/in/katharpatcha99/
+
+GitHub Url:
+https://github.com/Kathar-Patcha-abdul-rahim
+
+
+Genesys - Role and Responsability
+
+Responsibilities:
+Designed and automated test scenarios for new epics and features using Java with the TestNG framework, contributing to the stability and functionality of the Speech-to-Text feature and other communication modules.
+Engaged in various types of testing, including API, UI, and End-to-End testing, to ensure comprehensive validation of features and enhancements.
+Provided innovative ideas for product optimization, focusing on both organizational and client needs, and contributed to the improvement of feature deployment processes.
+
+Accomplishments:
+Developed over 150 automated test scenarios across more than 50 epics or features, enhancing API, UI, and End-to-End testing processes, which resulted in a 30% increase in feature deployment speed.
+Specialized in the Speech-to-Text functionality, with a focus on optimizing the transcript component to ensure accuracy and stability across deployments.
+Implemented internal web applications that reduced testing overhead by 20%, streamlining team workflows and increasing overall efficiency.
+
+Accenture - Role and Responsability
+
+Responsibilities:
+Engaged in continuous testing of web applications, focusing on various updates post-launch to ensure ongoing quality and stability.
+Followed a comprehensive testing process, including Test Planning, Test Case Design, and end-to-end test execution and automation using Selenium with Java.
+Contributed to designing innovative test cases and resolving functional issues within applications.
+Conducted various types of testing, including system, integration, and regression testing, to ensure thorough validation of the product.
+
+Accomplishments:
+Automated over 200 test cases using Selenium with Java, leading to a 40% increase in test coverage and a 15% reduction in testing time.
+Identified and resolved 50+ critical issues during system and integration testing, reducing post-release defects by 20%.
+Ranked in the top 10 among testers and earned a place on the Wall of Fame for outstanding performance and dedication.
+
+
+
+Education:
+
+University of Windsor | Masters in Applied Computing, Artificial Intelligence stream / computer science
+
+GPA: 8.4 / 3.4 | 2024 - 2025 (May)
+
+Panimalar Institute Of Technology, Anna University | Bachelors in Computer Science and Engineering
+
+GPA: 8.6 / 3.4
+
+Skills:
+
+Java, Data Structures, Design Patterns, MySQL, MongoDB, C, Selenium, Playwright, Python, Neural networks, UFT, Cucumber, TestNG, Sonar, Javacript, vueJs, RestfulAPIs, automation testing, Unix, AWS, Postman, JIRA, Jenkins, ALM, GIT, bitbucket, springboot, html, css, socket Programming
+
+I am currently in my 3rd term of my 4 term Master’s program in Applied Computing. "I have completed 18 credits toward my Master’s degree of 36 credits (2 Terms are pending).
+
+From Jan 01, 2025 To Oct 31, 2025 - 8 Months
