@@ -305,13 +305,19 @@
 
 </section>
 
+<form id="feedback-form">
+    <h2>Feedback</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-<section class="qna-section">
-    <h2>Ask Me Anything</h2>
-    <input type="text" id="question" placeholder="Ask me a question..."/>
-    <button onclick="askQuestion()">Submit</button>
-    <p id="response"></p>
-</section>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
 
 <section class="contact">
     <h2>Contact</h2>
