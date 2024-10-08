@@ -113,33 +113,42 @@ nav a:hover {
 
 
 
-.qna-section {
-    background-color: white;
+#feedback-form {
+    max-width: 60%;
+    margin: auto;
     padding: 20px;
-    margin: 40px auto;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
 }
 
-.qna-section input, .qna-section button {
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 70%;
     padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-    width: 80%;
-    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.qna-section button {
-    background-color: #006699;
+button {
+    background-color: #4CAF50;
     color: white;
     border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.qna-section button:hover {
-    background-color: #004466;
+button:hover {
+    background-color: #45a049;
 }
+
 
 .contact {
     background-color: darkslategrey; /* Keep the background white */
