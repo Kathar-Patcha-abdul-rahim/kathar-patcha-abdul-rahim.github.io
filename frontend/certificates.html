@@ -376,7 +376,8 @@
         // Send email using EmailJS
         emailjs.send("service_qa766ee", "template_zaoec7v", params, "NUFiHFQE7W5wsFW-t")
             .then(function (response) {
-                    alert("Success! " + response.status);
+                    alert("Feedback sent successfully! " + response.status);
+                    document.getElementById('feedback-form').reset();
                 },
                 function (error) {
                     alert("FAILED to send mail: " + error);
