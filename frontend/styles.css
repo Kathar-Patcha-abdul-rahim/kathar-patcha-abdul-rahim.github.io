@@ -109,8 +109,12 @@ nav a:hover {
     border-left: 5px solid #006699;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
+.experience-tile:hover, .education-tile:hover {
+    transform: scale(1.02);
+}
 
 
 #feedback-form {
@@ -121,6 +125,11 @@ nav a:hover {
     border-radius: 10px;
     background-color: black;
     color: white;
+    transition: transform 0.2s;
+}
+
+#feedback-form:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
 }
 
 label {
