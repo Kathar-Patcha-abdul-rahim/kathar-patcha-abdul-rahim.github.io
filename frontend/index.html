@@ -6,6 +6,13 @@
     <title>Kathar Patcha - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Data files/icon.jpg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("NUFiHFQE7W5wsFW-t");
+        })();
+    </script>
 </head>
 <body>
 
@@ -233,7 +240,6 @@
                 <button class="close-btn">Close</button> <!-- Close button -->
             </div>
         </div>
-        <!-- Add more experiences as needed from your resume -->
     </section>
 
     <section class="education">
@@ -245,11 +251,11 @@
                 software development. The curriculum includes hands-on projects, which enhance my understanding of
                 practical applications in various domains, including healthcare, finance, and intelligent systems. My
                 current CGPA is 8.4/10 (equivalent to 3.36/4.0).</p>
-            <p>Transcripts:</p>
-            <ul>
-                <li><a href="../Data files/Transcripts/Master-unofficial.pdf" style="color: blue;" target="_blank">Transcript
-                    - Master (Unofficial)</a></li>
-            </ul>
+<!--            <p>Transcripts:</p>-->
+<!--            <ul>-->
+<!--                <li><a href="../Data files/Transcripts/Master-unofficial.pdf" style="color: blue;" target="_blank">Transcript-->
+<!--                    - Master (Unofficial)</a></li>-->
+<!--            </ul>-->
         </div>
         <div class="education-tile">
             <h3>Bachelor's Degree in Computer Science - Panimalar Institute of Technology (2016 - 2020)</h3>
@@ -259,29 +265,32 @@
                 problem-solving and critical-thinking skills. My academic journey included in-depth studies in data
                 structures, algorithms, and software development methodologies, culminating in a CGPA of 8.6/10
                 (equivalent to 3.44/4.0).</p>
-            <p>Transcripts:</p>
-            <ul>
-                <li><a href="../Data files/Transcripts/Bachelors.pdf" style="color: blue;" target="_blank">Transcript -
-                    Bachelors</a></li>
-            </ul>
+<!--            <p>Transcripts:</p>-->
+<!--            <ul>-->
+<!--                <li><a href="../Data files/Transcripts/Bachelors.pdf" style="color: blue;" target="_blank">Transcript - -->
+<!--                    Bachelors</a></li>-->
+<!--            </ul>-->
         </div>
     </section>
 
 </div>
 
-<form id="feedback-form">
+<form id="feedback-form" style="text-align: center">
     <h2>Feedback</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+    <label for="from_name">Name:</label>
+    <input type="text" id="from_name" name="from_name" required>
 
-    <label for="feedback">Your Feedback:</label>
-    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+    <label for="email_id">Email:</label>
+    <input type="email" id="email_id" name="email_id" required>
+
+    <label for="message">Your Feedback:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
     <br>
-    <button type="submit">Submit</button>
+    <button type="button" onclick="SendMail()">Submit</button>
 </form>
+
 
 <section class="contact">
     <h2>Contact</h2>
@@ -291,36 +300,6 @@
     <p><i class="fas fa-phone-alt"></i> Phone: +1 382 880 0747</p>
     <p class="copyright">© 2024 Kathar Patcha. All rights reserved.</p>
 </section>
-
-
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-<script defer>
-    (function () {
-        emailjs.init("NUFiHFQE7W5wsFW-t"); // Replace with your Public API Key
-    })();
-
-    document.getElementById('feedback-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('feedback').value;
-
-        const templateParams = {
-            name: name,
-            email: email,
-            feedback: message,
-        };
-
-        emailjs.send('service_qa766ee', 'template_3d37d8u', templateParams) // Replace with your Service ID and Template ID
-            .then(function (response) {
-                alert('Feedback submitted successfully!');
-                document.getElementById('feedback-form').reset(); // Reset the form after submission
-            }, function (error) {
-                alert('Error submitting feedback: ' + JSON.stringify(error));
-            });
-    });
-</script>
 
 <script>
     const text = "Kathar Patcha - Portfolio";
@@ -384,19 +363,21 @@
         });
     });
 
-    function askQuestion() {
-        const question = document.getElementById('question').value;
-        fetch('http://localhost:5000/ask', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({question}),
-        })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('response').innerText = data.answer;
-            });
+    function SendMail() {
+        const params = {
+            from_name: document.getElementById('from_name').value,
+            email_id: document.getElementById('email_id').value,
+            message: document.getElementById('message').value,
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_qa766ee", "template_zaoec7v", params, "NUFiHFQE7W5wsFW-t")
+            .then(function (response) {
+                    alert("Success! " + response.status);
+                },
+                function (error) {
+                    alert("FAILED to send mail: " + error);
+                });
     }
 </script>
 

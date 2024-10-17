@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificates</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("NUFiHFQE7W5wsFW-t");
+        })();
+    </script>
 </head>
 <body>
 
@@ -305,18 +311,20 @@
 
 </section>
 
-<form id="feedback-form">
+<form id="feedback-form" style="text-align: center">
     <h2>Feedback</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+    <label for="from_name">Name:</label>
+    <input type="text" id="from_name" name="from_name" required>
 
-    <label for="feedback">Your Feedback:</label>
-    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+    <label for="email_id">Email:</label>
+    <input type="email" id="email_id" name="email_id" required>
+
+    <label for="message">Your Feedback:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
     <br>
-    <button type="submit">Submit</button>
+    <button type="button" onclick="SendMail()">Submit</button>
 </form>
 
 <section class="contact">
@@ -355,6 +363,23 @@
     }
 
     window.onload = typeWriter;
+
+    function SendMail() {
+        const params = {
+            from_name: document.getElementById('from_name').value,
+            email_id: document.getElementById('email_id').value,
+            message: document.getElementById('message').value,
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_qa766ee", "template_zaoec7v", params, "NUFiHFQE7W5wsFW-t")
+            .then(function (response) {
+                    alert("Success! " + response.status);
+                },
+                function (error) {
+                    alert("FAILED to send mail: " + error);
+                });
+    }
 </script>
 </body>
 </html>
