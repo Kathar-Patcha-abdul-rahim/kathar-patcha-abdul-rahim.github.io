@@ -266,6 +266,101 @@ Run the training script: <code>python train.py</code>
     </div>
 
     <div class="projects">
+        <h2>Implementation of Cryptographic Hashing for Authenticating Paper Documents</h2>
+        <p>This project presents an approach to verifying the authenticity of paper documents using cryptographic
+            hashing and Optical Character Recognition (OCR). It addresses the challenge of document forgery and provides
+            a simpler, more accessible, and cost-effective alternative to traditional security measures. The system uses
+            the SHA-256 hashing algorithm to generate unique hashes for document pages and securely stores them
+            alongside associated metadata. Users can authenticate their documents by uploading scanned images or PDFs,
+            which the system processes to detect alterations or forgeries.</p>
+        <p><strong>Technologies Used:</strong> JavaScript, Express.js, Tesseract.js, QRCode Library, SHA-256, MongoDB,
+            EJS, Bootstrap</p>
+        <button class="dropdown-btn">More Details</button>
+        <div class="dropdown-content">
+            <h3>Overview</h3>
+            <p>The system uses cryptographic hashing (SHA-256) to generate unique hashes for document pages. It supports
+                Optical Character Recognition (OCR) for processing scanned images or PDFs, converts them into digital
+                text, and verifies authenticity by comparing newly generated hashes with previously stored ones. The
+                application also allows users to generate a QR code containing the document’s hash and metadata for easy
+                sharing and verification.</p>
+
+            <h4>Features</h4>
+            <ul>
+                <li><strong>Cryptographic Hashing (SHA-256):</strong> Generates a unique, fixed-size 256-bit hash for
+                    each document page.
+                </li>
+                <li><strong>Optical Character Recognition (OCR):</strong> Converts scanned images or PDFs into digital
+                    text for hashing and verification.
+                </li>
+                <li><strong>User-Friendly UI:</strong> Simplified web interface that supports multiple document formats
+                    including PDF and JPEG.
+                </li>
+                <li><strong>QR Code Generation:</strong> Generates a QR code containing the document's hash and
+                    metadata, enabling quick verification and sharing.
+                </li>
+                <li><strong>Database:</strong> Uses MongoDB for storing document hashes and metadata.</li>
+            </ul>
+
+            <h4>Installation and Setup</h4>
+            <pre>
+git clone https://github.com/Kathar-Patcha-abdul-rahim/PaperDocAuth.git
+cd PapDocAuth
+npm install
+        </pre>
+            <p>Create a .env file in the root directory of the project to store your environment variables securely. Add
+                the following environment variables:</p>
+            <pre>
+MONGO_URI=your_mongodb_connection_string_here
+PORT=3000
+        </pre>
+            <h4>Start the Application</h4>
+            <pre>
+npm start
+        </pre>
+            <p>Access the application by opening your browser and going to <a href="http://localhost:3000">http://localhost:3000</a>.
+            </p>
+
+            <h4>Usage</h4>
+            <p><strong>Registering a Document:</strong></p>
+            <ul>
+                <li>Upload a scanned image or PDF of the paper document.</li>
+                <li>Add relevant metadata such as the issuer's name, date, and intended recipient.</li>
+                <li>The system will generate a hash for each document page and store it securely in the database.</li>
+            </ul>
+
+            <p><strong>Verifying a Document:</strong></p>
+            <ul>
+                <li>Upload the document you wish to verify.</li>
+                <li>The system will re-hash the document and compare it with the stored hash.</li>
+                <li>If the hashes match, the document is verified as authentic. Otherwise, the system will flag it as
+                    potentially tampered with.
+                </li>
+            </ul>
+
+            <h4>Limitations</h4>
+            <ul>
+                <li>High-resolution scans are required for accurate OCR performance.</li>
+                <li>Limited to text-based document verification; does not handle documents with extensive handwritten
+                    content or complex formatting.
+                </li>
+                <li>Multi-page document and PDF support are currently under development. At present, the application
+                    supports single JPEG and PNG images.
+                </li>
+            </ul>
+
+            <h4>Contributing</h4>
+            <p>Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or
+                feature requests.</p>
+
+            <h4>License</h4>
+            <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+
+            <button class="close-btn">Close</button> <!-- Close button -->
+        </div>
+    </div>
+
+
+    <div class="projects">
         <h2>Job Environment Simulator</h2>
         <p>This project aims to bridge the gap between academic learning and real-world IT experience by connecting
             university students with companies. The platform allows students to work on actual industry tasks, enhancing
@@ -503,7 +598,7 @@ make
     <h2>Contact</h2>
     <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/katharpatcha99" target="_blank">Kathar
         Patcha</a></p>
-    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:abdulrak@uwindsor.ca">abdulrak@uwindsor.ca</a></p>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:katharpatcha99@gmail.com">katharpatcha99@gmail.com</a></p>
     <p><i class="fas fa-phone-alt"></i> Phone: +1 382 880 0747</p>
     <p class="copyright">© 2024 Kathar Patcha. All rights reserved.</p>
 </section>
