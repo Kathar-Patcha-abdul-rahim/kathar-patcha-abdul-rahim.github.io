@@ -351,3 +351,49 @@ button:hover {
     color: blue; /* Change link color to blue */
     text-decoration: underline; /* Underline links */
 }
+
+
+/* Unique Resume Dropdown Styles */
+.resume-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.resume-dropdown-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.resume-dropdown-link:hover {
+  background-color: #0277a3; /* lighter blue hover */
+}
+
+/* Dropdown Menu */
+.resume-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #004d6b; /* matches navbar */
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 999;
+  border-radius: 0 0 4px 4px;
+}
+
+.resume-dropdown-content a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.resume-dropdown-content a:hover {
+  background-color: #006b8e;
+}
+
+/* Show dropdown on hover */
+.resume-dropdown:hover .resume-dropdown-content {
+  display: block;
+}
